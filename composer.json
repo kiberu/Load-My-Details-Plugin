@@ -1,0 +1,10 @@
+{
+    "name": "abu/load-my-details",
+    "authors": [
+        {
+            "name": "Abu",
+            "email": "kiberusharif@gmail.com"
+        }
+    ],
+    "require": {}
+}
