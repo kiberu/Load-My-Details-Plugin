@@ -23,9 +23,10 @@ if ( ! class_exists( 'Hooks' ) ) {
         }
 
         public function action_hooks() {
-
             add_action( 'init', array( $this->activation, 'check_if_woocommerce_installed' ) );
             add_action( 'woocommerce_before_checkout_billing_form',  array( $this->checkoutPage, 'add_load_my_details_button' ) ); 
+            add_action( 'woocommerce_admin_order_data_after_billing_address', array( $this->checkoutPage, 'display_custom_fields_in_dashboard' ), 10, 1 );
+            add_action( 'woocommerce_checkout_update_order_meta', array( $this->checkoutPage, 'save_order_custom_fields' ) );
         }
 
         public function filter_hooks() {

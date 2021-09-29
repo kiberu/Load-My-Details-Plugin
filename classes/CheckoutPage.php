@@ -41,8 +41,13 @@ if ( ! class_exists( 'CheckoutPage' ) ) {
             }
 
             if ( ! empty( $_POST['billing_website'] ) ) {
-                update_post_meta( $order_id, '_lmd_billing_website', sanitize_text_field( $_POST['billing_username'] ) );
+                update_post_meta( $order_id, '_lmd_billing_website', sanitize_text_field( $_POST['billing_website'] ) );
             }
-}
+        }
+
+        public function display_custom_fields_in_dashboard( $order ) {
+            printf( '<p><strong>%1$s:</strong> <a href="%2$s">%3$s</a>', __('Website'), esc_url( get_post_meta( $order->get_id(), '_lmd_billing_website', true ) ), get_post_meta( $order->get_id(), '_lmd_billing_website', true ) );
+            echo '<p><strong>'.__('Username').':</strong> ' . get_post_meta( $order->get_id(), '_lmd_billing_username', true ) . '</p>';
+        }
     }
 }
