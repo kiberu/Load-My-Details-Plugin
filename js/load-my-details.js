@@ -19,20 +19,20 @@
         const first_name_field = $('#billing_first_name');
         const last_name_field = $('#billing_last_name');
         const company_field = $('#billing_company');
-        const country_field = $('#billing_country');
+        const username_field = $('#billing_username');
         const address_field = $('#billing_address_1');
         const address_2_field = $('#billing_address_2');
         const city_field = $('#billing_city');
         const state_field = $('#billing_state');
         const phone_field = $('#billing_phone');
         const email_field = $('#billing_email');
-
+        const website_field = $('#billing_website');
 
 
         // Change button text to loading
         lmd_button.html("Loading...");
 
-        // We are using axios to make use of its non blocking nature such that other users of the system are not affected
+        // We are using axios to make use of its non blocking nature such that other users of the system are not affected by this process
         axios.get('https://jsonplaceholder.typicode.com/users')
         .then(response => {
             const result = response.data;
@@ -43,7 +43,7 @@
             lmd_button.addClass("done")
             
             // Extract variables form customer object
-            const {id, name, address, company, email, phone, username, website} = customer
+            const { name, address, company, email, phone, username, website} = customer
             
             // Populate the fields with customer data from api
             first_name_field.val(name ? name.split(" ")[0] : " ")
@@ -53,8 +53,10 @@
             address_2_field.val(address.suite || "")
             city_field.val(address.city || "")
             state_field.val(address.city || "")
-            phone_field.val(phone || "")
+            phone_field.val(phone ? phone.split(" ")[0] : "")
             email_field.val(email || "")
+            website_field.val(website || "")
+            username_field.val(username || "")
 
         })
         .catch(error => {
@@ -63,7 +65,6 @@
             lmd_button.removeClass("done")
         });
         
-
     });
  
 })(jQuery);
