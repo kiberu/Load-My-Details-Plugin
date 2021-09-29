@@ -9,7 +9,7 @@
  *
  * @wordpress-plugin
  * Plugin Name:       Load My Details
- * Description:       Plugin Assume that posts are orders, and users are customers and the user ordering has userId 1.
+ * Description:       Adds a load my details button on checkout page, adjusts checkout fields, and shows them in admin dashboard
  * Version:           1.0.0
  * Author:            Kiberu Sharif
  * Author URI:        https://twitter.com/sharifkiberu

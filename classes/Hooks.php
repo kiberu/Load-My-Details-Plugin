@@ -63,6 +63,6 @@ if ( ! class_exists( 'LMD_Hooks' ) ) {
         }
     }    
 
-    // Instatioate hooks class
+    // Instatitate hooks class
     $hooks = new LMD_Hooks();
 } 
