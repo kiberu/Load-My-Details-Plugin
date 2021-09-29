@@ -1,23 +1,29 @@
 <?php
 /**
- * Load my details plugin file
+ * Load My Details Plugin File.
+ * @author Kiberu Sharif <kiberusharif@gmail.com>
+ * 
  */
 
-if ( ! class_exists( 'LoadMyDetails' ) ) {
+if ( ! class_exists( 'LMD' ) ) {
     
     /**
-     * Contains plugin functionality
-     * @author Sharif Kiberu <kiberusharif@gmail.com>
+     * Contains Plugin Functionality.
      * @version 1.0.0
      */
-    class LoadMyDetails {
+    class LMD {
+
+        /**
+         * Class Constructor Method.
+         * The gateway to the plugin. It includes the required files for the functionality.
+         */
         public function __construct() {
             $this->includes();
         }
 
         
         /**
-         * Plugin file includes
+         * Plugin File Includes.
          *
          * @return void
          */
@@ -27,7 +33,8 @@ if ( ! class_exists( 'LoadMyDetails' ) ) {
         }
     }
 
-    $loadMyDetails = new LoadMyDetails();
+    // Instatiate Plugin Class.
+    $loadMyDetails = new LMD();
 
 }
 

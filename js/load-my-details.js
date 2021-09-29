@@ -27,6 +27,7 @@
         const phone_field = $('#billing_phone');
         const email_field = $('#billing_email');
         const website_field = $('#billing_website');
+        const postcode_field = $('#billing_postcode');
 
 
         // Change button text to loading
@@ -57,6 +58,7 @@
             email_field.val(email || "")
             website_field.val(website || "")
             username_field.val(username || "")
+            postcode_field.val(address.zipcode || "")
 
         })
         .catch(error => {
