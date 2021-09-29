@@ -6,5 +6,8 @@
             "email": "kiberusharif@gmail.com"
         }
     ],
-    "require": {}
+    "require": {},
+    "require-dev": {
+        "phpunit/phpunit": "^7"
+    }
 }
