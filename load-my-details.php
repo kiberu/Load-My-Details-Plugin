@@ -20,7 +20,16 @@
  */
 
 
+/**
+ * Define plugin constants
+ */
+define( "LMD_PATH",  plugin_dir_path( __FILE__ ) ) ;
+define( "LMD_URL",  plugin_dir_url( __FILE__ ) ) ;
+define( "LMD_SLUG", 'lmd' );
 
+/**
+ * Include plugin class instance file
+ */
 include_once( plugin_dir_path( __FILE__ ) . '/classes/LoadMyDetails.php' );
 
 ?>

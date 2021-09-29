@@ -13,7 +13,7 @@ if ( ! class_exists( 'Activation' ) ) {
         }
 
         public function includes() {
-            require_once( LMD_PATH . '/Notifications.php' );
+            require_once( LMD_PATH . 'classes/Notifications.php' );
         }
     }    
 } 
